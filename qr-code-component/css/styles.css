@@ -1,0 +1,101 @@
+/* CUSTOM PROPERTIES */
+
+:root {
+  /* 
+    colors 
+  */
+
+  --white: hsl(0, 0%, 100%);
+  --black: hsl(0, 0%, 0%);
+  --lightGray: hsl(212, 45%, 89%);
+  --grayishBlue: hsl(220, 15%, 55%);
+  --darkBlue: hsl(218, 44%, 22%);
+
+  /* 
+    typography
+  */
+
+  --fontFamily: "Outfit", system-ui, -apple-system, "Segoe UI", "Open Sans",
+    "Helvetica Neue", sans-serif;
+  --weight400: 400;
+  --weight700: 700;
+}
+
+/* RESET */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+  color: inherit;
+}
+
+/* STYLES */
+
+/* qr code component */
+
+body {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  font-family: var(--fontFamily);
+  color: var(--black);
+  background-color: var(--lightGray);
+}
+
+.qr-code-component {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  gap: 1.5rem;
+  max-width: 345px;
+  padding: 1rem 1rem 2rem 1rem;
+  border-radius: 1rem;
+  text-align: center;
+  box-shadow: 0 1rem 10px 0 var(--lightGray);
+  background-color: var(--white);
+}
+
+.qr-code-img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+}
+
+.title {
+  font-weight: var(--weight700);
+  color: var(--darkBlue);
+}
+
+.desc {
+  max-width: 250px;
+  font-size: 15px;
+  font-weight: var(--weight400);
+  color: var(--grayishBlue);
+}
+
+/* attribution */
+
+.attribution {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem;
+  text-align: center;
+  color: var(--darkBlue);
+  background-color: hsla(0, 0%, 100%, 0.219);
+}
+
+.attribution a {
+  font-weight: var(--weight700);
+}
+
+.attribution a:hover {
+  text-decoration: underline;
+}
