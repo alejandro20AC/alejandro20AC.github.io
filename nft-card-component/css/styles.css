@@ -1,0 +1,180 @@
+/* CUSTOM PROPERTIES  */
+
+:root {
+  /* Colors */
+
+  /* 
+    Primary 
+  */
+
+  --softBlue: hsl(215, 51%, 70%);
+  --cyan: hsl(178, 100%, 50%);
+
+  /* 
+  Neutral 
+*/
+
+  --veryDarkBlue-main: hsl(217, 54%, 11%); /*(main BG)*/
+  --veryDarkBlue-card: hsl(216, 50%, 16%); /*(card BG)*/
+  --veryDarkBlue-line: hsl(215, 32%, 27%); /*(line)*/
+  --white: hsl(0, 0%, 100%);
+
+  /* Typography */
+
+  /* 
+    font 
+  */
+
+  --fontFamily: "Outfit", sans-serif;
+
+  /* 
+    weights
+  */
+
+  --weight300: 300;
+  --weight400: 400;
+  --weight600: 600;
+}
+
+/* RESET */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* STYLES */
+
+body {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  font-family: var(--fontFamily);
+  color: var(--softBlue);
+  background-color: var(--veryDarkBlue-main);
+}
+
+.states:hover {
+  color: var(--cyan);
+}
+
+.card {
+  max-width: 375px;
+  padding: 1.75rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 4rem 2rem rgba(0, 0, 0, 0.233);
+  background-color: var(--veryDarkBlue-card);
+}
+
+.bx-img {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 1rem;
+}
+
+.bx-img:is(:active, :hover) .active-img {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+  cursor: pointer;
+}
+.active-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: hsla(178, 100%, 50%, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: all 0.2s ease;
+}
+
+.card-img {
+  width: 100%;
+  height: auto;
+  border-radius: 1rem;
+}
+
+.card-title {
+  margin-top: 1.25rem;
+  font-weight: var(--weight600);
+  color: var(--white);
+  transition: color 0.2s ease;
+}
+
+.card-title a {
+  transition: color 0.2s ease;
+}
+
+.card-desc {
+  margin-top: 1.25rem;
+  font-weight: var(--weight300);
+  font-size: 18px;
+}
+
+.card-details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1.25rem;
+}
+
+.cryptocurrency {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.crypto-value {
+  font-weight: var(--weight400);
+  color: var(--cyan);
+}
+
+.time-left {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.time {
+  font-weight: var(--weight400);
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-block: 1rem 0;
+  margin-top: 1.25rem;
+  border-block-start: 1px solid var(--veryDarkBlue-line);
+}
+
+.avatar-img {
+  width: 35px;
+  border-radius: 50%;
+  border: 1px solid var(--white);
+}
+
+.author p {
+  font-weight: var(--weight300);
+}
+
+.author a {
+  color: var(--white);
+  transition: color 0.2s ease;
+}
